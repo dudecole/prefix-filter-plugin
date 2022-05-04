@@ -10,7 +10,10 @@
   tasks:
     - name: debug all the ansible variables
       debug:
-        msg: "{{ ansible_facts['env']['MY_GENERIC_PASSWORD'] }}"
+        msg: 
+          - "{{ ansible_facts['env']['MY_GENERIC_PASSWORD'] }}"
+          - "{{ ansible_facts['env']['MY_GENERIC_USERNAME'] }}"
+
 
     #- name: debug some localhost vars
     #  debug:
