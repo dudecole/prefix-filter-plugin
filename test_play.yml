@@ -1,0 +1,46 @@
+---
+- hosts: localhost
+  connection: local
+
+    #  vars:
+    #    my_passwd: "password123"
+    #    my_user: "johndoe"
+    #    my_prefix: "pre"
+
+  tasks:
+    - name: debug all the ansible variables
+      debug:
+        msg: "{{ ansible_facts }}"
+
+    - name: debug some localhost vars
+      debug:
+        msg: "{{ hostvars['localhost] }}"
+        
+
+    #    - name: set fact on the prefix stuff
+    #      set_fact:  
+    #        "{{ my_passwd | prefix(my_prefix) }}": "{{ my_passwd }}"
+    #        "{{ my_user | prefix(my_prefix)  }}": "{{ my_user }}"
+    #
+    #    - name: debug variable
+    #      debug:
+    #        msg: 
+    #          - "{{ hostvars['localhost'] }}"
+    #          #          - "{{ ansible_facts }}"
+
+#          - "here are the values"
+#          - "{{ password_prefix.values() | list }}"
+
+
+
+#        password_prefix: "{{ passwd | prefix(prefix) }}"
+#        {"{{ key }}":"{{ item.val }}"}
+  
+#- name: first run of this filter, how are we doing
+#  debug:
+#    msg: "{{ user | prefix(prefix) }}"
+
+#- name: print the k,v of dict
+#  debug:
+#    msg: 
+#      "{{ passwd | prefix(prefix) }}"
