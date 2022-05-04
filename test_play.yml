@@ -8,14 +8,14 @@
     #    my_prefix: "pre"
 
   tasks:
-    #- name: debug all the ansible variables
-    #  debug:
-    #    msg: "{{ ansible_facts }}"
-
-    - name: debug some localhost vars
+    - name: debug all the ansible variables
       debug:
-        msg: "{{ hostvars['localhost'] }}"
-        
+        msg: "{{ ansible_facts }}"
+
+    #- name: debug some localhost vars
+    #  debug:
+    #    msg: "{{ hostvars['localhost'] }}"
+    #    
 
     #    - name: set fact on the prefix stuff
     #      set_fact:  
