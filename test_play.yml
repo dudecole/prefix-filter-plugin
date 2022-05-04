@@ -2,17 +2,18 @@
 - hosts: localhost
   connection: local
 
-    #  vars:
-    #    my_passwd: "password123"
-    #    my_user: "johndoe"
-    #    my_prefix: "pre"
-
   tasks:
     - name: debug all the ansible variables
       debug:
         msg: 
           - "{{ ansible_facts['env']['MY_GENERIC_PASSWORD'] }}"
           - "{{ ansible_facts['env']['MY_GENERIC_USERNAME'] }}"
+
+    - name: debug what variables are available
+      debug:
+        msg: 
+          - "my_generic_password: {{ my_generic_password }}"
+          - "my_generic_username: {{ my_generic_username }}"
 
 
     #- name: debug some localhost vars
