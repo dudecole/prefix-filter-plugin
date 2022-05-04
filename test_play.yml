@@ -8,12 +8,15 @@
         msg: 
           - "{{ ansible_facts['env']['MY_GENERIC_PASSWORD'] }}"
           - "{{ ansible_facts['env']['MY_GENERIC_USERNAME'] }}"
+          - "{{ ansible_facts['env']['SOME_PREFIX'] }}"
 
     - name: debug what variables are available
       debug:
         msg: 
           - "my_generic_password: {{ my_generic_password }}"
           - "my_generic_username: {{ my_generic_username }}"
+          - "some_prefix: {{ some_prefix }}"
+
 
 
     #- name: debug some localhost vars
